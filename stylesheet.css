@@ -1,0 +1,74 @@
+
+body {
+    background-color: /*#c2c2d6*/ black;
+    font-family: 'Orbitron', sans-serif;
+}
+#mainCalcBody{
+    background-color: black;
+    margin-top: 10%;
+    margin-left: 35%;
+    margin-right: 35%;
+    display: flex;
+    flex-direction: column;
+}
+#inputoutputBox {
+    color: white;
+    padding-right: 1%;
+    text-align: right;
+}
+.buttonRow{
+    display: flex;
+}
+
+.button {
+    height: 50px;
+    width: 25%;
+    border-width: 0.5px;
+    border-color: black;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.numberButton {
+
+    background-color: #4D4D4D;
+    color : white;
+}
+.operatorButton {
+    
+    background-color: #666666;
+    
+    color : white;
+}
+
+.button:hover{
+    
+    border-color: grey;
+    color: grey;
+
+}
+
+.rrButton {
+    
+    background-color: #AC3939;
+    
+    color : white;
+}
+
+.calcButton {
+    
+    background-color: #004466;
+    
+    color : white;
+    width: 75%;
+}
+
+@media screen and (max-width : 35rem) {
+    #mainCalcBody{
+        background-color: black;
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+}

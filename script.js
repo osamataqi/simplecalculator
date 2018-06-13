@@ -1,5 +1,6 @@
+document.getElementById("inputoutputBox").innerHTML = "0"
 function clickButton(button){
-    if (document.getElementById("inputoutputBox").innerHTML){
+    if (document.getElementById("inputoutputBox").innerHTML !== "0"){
         document.getElementById("inputoutputBox").innerHTML = document.getElementById("inputoutputBox").innerHTML + button;
     }
     else {
@@ -13,11 +14,13 @@ function calculate(){
 }
 
 function del(){
-    if (document.getElementById("inputoutputBox").innerHTML){
+    if (document.getElementById("inputoutputBox").innerHTML !== "0"){
         document.getElementById("inputoutputBox").innerHTML = document.getElementById("inputoutputBox").innerHTML.substring(0,document.getElementById("inputoutputBox").innerHTML.length - 2)
+        if (!document.getElementById("inputoutputBox").innerHTML)
+        document.getElementById("inputoutputBox").innerHTML = "0";
     }
 }
 
 function clr(){
-    document.getElementById("inputoutputBox").innerHTML = "";
+    document.getElementById("inputoutputBox").innerHTML = "0";
 }

@@ -5,50 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Simple Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css" />
-    <script src="script.js"></script>
 </head>
 <body>
-    <header class="header">
-        <h1 class="title">
-            Simple Calculator Project
-        </h1>
-    </header>
     <main>
-        <div class="mainCalcBody">
-            <div id="inputoutputBox">
+            <div id="mainCalcBody">
+                <div id="inputoutputBox">
+                    0
+                </div>
+                <div class="buttonRow">
+                    <button class="button rrButton" onclick="del()">Del</button>
+                    <button class="button rrButton" onclick="clr()">Clr</button>
+                    <button class="button operatorButton" onclick="clickButton(this.innerHTML)" >.</button>
+                    <button class="button operatorButton" onclick="clickButton(' ' + this.innerHTML + ' ')">/</button>
+                </div>
+                <div class="buttonRow">
+                    <button class="button numberButton" onclick="clickButton(this.innerHTML)">7</button>
+                    <button class="button numberButton" onclick="clickButton(this.innerHTML)">8</button>
+                    <button class="button numberButton" onclick="clickButton(this.innerHTML)">9</button>
+                    <button class="button operatorButton" onclick="clickButton(' ' + this.innerHTML + ' ')">+</button>
+                </div>
+                <div class="buttonRow">
+                    <button class="button numberButton" onclick="clickButton(this.innerHTML)">4</button>
+                    <button class="button numberButton" onclick="clickButton(this.innerHTML)">5</button>
+                    <button class="button numberButton" onclick="clickButton(this.innerHTML)">6</button>
+                    <button class="button operatorButton" onclick="clickButton(' ' + this.innerHTML + ' ')">-</button>
+                </div>
+                <div class="buttonRow">
+                    <button class="button numberButton" onclick="clickButton(this.innerHTML)">1</button>
+                    <button class="button numberButton"onclick="clickButton(this.innerHTML)" >2</button>
+                    <button class="button numberButton" onclick="clickButton(this.innerHTML)">3</button>
+                    <button class="button operatorButton" onclick="clickButton(' ' + this.innerHTML + ' ')">*</button>
+                </div>
+                <div class="buttonRow">
+                    <button class="button numberButton" onclick="clickButton(this.innerHTML)" >0</button>
+                    <button class="button calcButton" onclick="calculate()" > = </button>
+                </div>
             </div>
-            <div class="buttonRow">
-                <button class="constantButton" onclick="clickButton('3.14')">π</button>
-                <button class="constantButton" onclick="clickButton('2.71')">e</button>
-                <button class="operatorButton" onclick="del()">Del</button>
-                <button class="operatorButton" onclick="clr()">Clr</button>
-            </div>
-            <div class="buttonRow">
-                <button class="numberButton" onclick="clickButton(this.innerHTML)">7</button>
-                <button class="numberButton" onclick="clickButton(this.innerHTML)">8</button>
-                <button class="numberButton" onclick="clickButton(this.innerHTML)">9</button>
-                <button class="operatorButton" onclick="clickButton(' ' + this.innerHTML + ' ')">+</button>
-            </div>
-            <div class="buttonRow">
-                <button class="numberButton" onclick="clickButton(this.innerHTML)">4</button>
-                <button class="numberButton" onclick="clickButton(this.innerHTML)">5</button>
-                <button class="numberButton" onclick="clickButton(this.innerHTML)">6</button>
-                <button class="operatorButton" onclick="clickButton(' ' + this.innerHTML + ' ')">-</button>
-            </div>
-            <div class="buttonRow">
-                <button class="numberButton" onclick="clickButton(this.innerHTML)">1</button>
-                <button class="numberButton"onclick="clickButton(this.innerHTML)" >2</button>
-                <button class="numberButton" onclick="clickButton(this.innerHTML)">3</button>
-                <button class="operatorButton" onclick="clickButton(' ' + this.innerHTML + ' ')">*</button>
-            </div>
-            <div class="buttonRow">
-                <button class="numberButton" onclick="clickButton(this.innerHTML)" >0</button>
-                <button class="operatorButton" onclick="clickButton(this.innerHTML)" >.</button>
-                <button class="operatorButton" onclick="calculate()" > = </button>
-                <button class="operatorButton" onclick="clickButton(' ' + this.innerHTML + ' ')">/</button>
-            </div>
-        </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
